@@ -8,25 +8,21 @@ import { Article } from './article.model'
 })
 export class ArticleComponent implements OnInit {
   @HostBinding('attr.class') cssClass = "row";
-  votes: number;
-  title: string;
-  link: string;
+  article: Article;
 
   constructor() { 
-    this.votes = 0
-    this.title = "Angular 2";
-    this.link = "http://angular.io";
+    this.article = new Article("Angular 2", "http://angular.io", 0); //parameters expected as defined in model class
   }
 
   ngOnInit() {
   }
 
   voteUp():boolean{
-    this.votes += 1;
+    this.article.votes += 1; // access the model-class properties
     return false;
   }
   voteDown():boolean{
-    this.votes -= 1;
+    this.article.votes -= 1; // access the model-class properties
     return false;
   }
 
