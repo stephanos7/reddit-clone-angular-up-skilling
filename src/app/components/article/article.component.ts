@@ -18,11 +18,11 @@ export class ArticleComponent implements OnInit {
   }
 
   voteUp():boolean{
-    this.article.votes += 1; // access the model-class properties
+    this.article.voteUp(); // access the model-class functions
     return false;
   }
   voteDown():boolean{
-    this.article.votes -= 1; // access the model-class properties
+    this.article.voteDown(); // access the model-class functions
     return false;
   }
 
