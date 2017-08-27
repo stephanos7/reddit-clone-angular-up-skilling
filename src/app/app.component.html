@@ -8,9 +8,10 @@
     <label for="link">Link:</label>
     <input name="link" #newlink> 
   </div>
-  <button (click)="addArticle(newlink, newtitle)" class="ui positive right floated button">Submit Your Link</button>
+  <button (click)="addArticle(newtitle, newlink)" class="ui positive right floated button">Submit Your Link</button>
 </form>
 <div class="ui grid posts">
-  <app-article>
-  </app-article>
+  <div class="ui grid posts">
+    <app-article *ngFor="let singleArticleVariable of articles" [article]="singleArticleVariable"></app-article>
+  </div>
 </div>
