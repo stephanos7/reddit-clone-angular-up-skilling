@@ -23,4 +23,7 @@ export class AppComponent {
     link.value = '';    // clear the input field value for "link"
     return false;       // prevent page load-refresh
   }
+  sortedArticles(): Article[] {
+  return this.articles.sort((a: Article, b: Article) => b.votes - a.votes);
+  }
 }

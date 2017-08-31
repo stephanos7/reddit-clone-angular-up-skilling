@@ -12,6 +12,6 @@
 </form>
 <div class="ui grid posts">
   <div class="ui grid posts">
-    <app-article *ngFor="let singleArticleVariable of articles" [article]="singleArticleVariable"></app-article>
+    <app-article *ngFor="let singleArticleVariable of  sortedArticles()" [article]="singleArticleVariable"></app-article>
   </div>
 </div>
