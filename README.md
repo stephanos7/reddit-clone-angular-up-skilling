@@ -4,10 +4,10 @@ ___
 1. Contract Definition with TypeScript
 2. Bind Inputs to Values
 3. Understand The Component Host
-4. Use Models
-5. Initiate Class Properties
-6. Prevent Click Propagation
-7. Define Data Structures with Models
+4. Prevent Click Propagation
+5. Define Data Structures with Models
+6. Initiate Class Properties
+
 ___
 
 ## 1. Contract Definition with TypeScript
@@ -43,7 +43,20 @@ As always, due to Angular's modularity, HostBinding is a Decorator which we can 
 import { Component, HostBinding, Input } from '@angular/core';
 ```
 
-## 4. Initiate Class Properties
+## 4. Prevent Click Propagation
+
+```typescript
+  addArticle(title: HTMLInputElement, link: HTMLInputElement): boolean {
+  ...
+    return false;       // prevent page load-refresh
+  }
+```
+
+
+## 5. Define Data Structures with Models
+
+
+## 6. Initiate Class Properties
 
 Initiate class properties by defining their types on the class definition **BUT only assign values within the constructor** function after passing the properties as parameters:
 
