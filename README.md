@@ -1,8 +1,6 @@
 # My Angular 4 up-skilling: Reddit-Clone App 
-*Based on the lessons from the NG-Book by Nate Murray et al. This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.3.*
+*My learning lessons from this project based on the lessons from the NG-Book by Nate Murray et al. This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.3.*
 ___
-My learning lessons from this project:
-
 1. Contract Definition with TypeScript
 2. Bind Inputs to Values
 3. Understand The Component Host
