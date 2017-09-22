@@ -1,12 +1,13 @@
-# My Angular 4 up-skilling: Reddit-Clone App 
+# My Angular 4 up-skilling. What have I learned by building a Reddit-Clone App 
 *My learning lessons from this project based on the lessons from the NG-Book by Nate Murray et al. This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.3.*
 ___
 1. Contract Definition with TypeScript
 2. Bind Inputs to Values
 3. Understand The Component Host
-4. Initiate Component Properties
-5. Prevent Click Propagation
-6. Define Data Structures with Models
+4. Use Models
+5. Initiate Class Properties
+6. Prevent Click Propagation
+7. Define Data Structures with Models
 ___
 
 ## 1. Contract Definition with TypeScript
@@ -41,5 +42,23 @@ As always, due to Angular's modularity, HostBinding is a Decorator which we can 
 ```typescript
 import { Component, HostBinding, Input } from '@angular/core';
 ```
+
+## 4. Initiate Class Properties
+
+Initiate class properties by defining their types on the class definition **BUT only assign values within the constructor** function after passing the properties as parameters:
+
+```typescript
+export class Article { 
+  title: string; 
+  link: string; 
+  votes: number;
+
+constructor(title: string, link: string, votes: number) { 
+    this.title = title;
+    this.link = link;
+    this.votes = votes;
+  } 
+```
+
 
 
