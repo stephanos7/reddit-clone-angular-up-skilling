@@ -16,3 +16,17 @@ Typescript helps us define the type of parameters we can expect to receive in ou
 ```typescript
 addNewArticle( title: HTMLInputElement, link: HTMLInputElement)
 ```
+
+## Binding Inputs to Values
+
+Having defined our function's parameters, we need to find a way to capture whatever we type into the form’s input fields. As any other programming paradigm, we do this by capturing the input into a special kind of local variable called: **a template variable**.
+
+```html
+<input name="title" #newTitle >
+```
+
+The hashtag syntax (#newTitle) of the template variable is called a **resolve**. The effect of the resolve is to make our new variable(newTitle) available to any expression within our view **hence local not global**
+
+Our template variable is actually an **object** and as such it contains a .type property which we have defined to be of type HTMLInpuElement and a **.value property in which we can now find the value of whatever we type into the html input: newTitle.value**
+
+
