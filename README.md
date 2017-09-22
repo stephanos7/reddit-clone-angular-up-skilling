@@ -13,3 +13,6 @@ ___
 
 ## 1. Contract Definition with TypeScript
 Typescript helps us define the type of parameters we can expect to receive in our click-event-triggered function. Notice how helpful it is for a developer to understand where the parameters should come from. Title and Link are the parameters we have defined and as we can see in the contract, they should always be of type: HTMLInputElement, ie coming from our HTML input form inside the relevant view. 
+```typescript
+addNewArticle( title: HTMLInputElement, link: HTMLInputElement)
+```
