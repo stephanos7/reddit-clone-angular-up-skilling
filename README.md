@@ -17,7 +17,7 @@ Typescript helps us define the type of parameters we can expect to receive in ou
 addNewArticle( title: HTMLInputElement, link: HTMLInputElement)
 ```
 
-## Binding Inputs to Values
+## 2. Binding Inputs to Values
 
 Having defined our function's parameters, we need to find a way to capture whatever we type into the form’s input fields. As any other programming paradigm, we do this by capturing the input into a special kind of local variable called: **a template variable**.
 
@@ -25,8 +25,23 @@ Having defined our function's parameters, we need to find a way to capture whate
 <input name="title" #newTitle >
 ```
 
-The hashtag syntax (#newTitle) of the template variable is called a **resolve**. The effect of the resolve is to make our new variable(newTitle) available to any expression within our view **hence local not global**
+The hashtag syntax (#newTitle) of the template variable is called a **RESOLVE**. The effect of the resolve is to make our new variable(newTitle) available to any expression within our view **hence local not global**
 
 Our template variable is actually an **object** and as such it contains a .type property which we have defined to be of type HTMLInpuElement and a **.value property in which we can now find the value of whatever we type into the html input: newTitle.value**
+
+## 3. Understanding the Component Host
+
+A component host is the HTML element on which we are attaching our component. In this case it is essentially the <app-article> html tag. What we want to achieve is to SYNCHRONISE the value of the html attribute of host element's (in this case a css class) with our component-class property called cssClass. Noteice how we have define this property on our component definition:
+```typescript
+export class ArticleComponent {
+  @HostBinding('attr.class') cssClass = "row";
+}
+```
+
+As always, due to Angular's modularity, HostBinding is a Decorator which we can be imported from the @angular/core package:
+
+```typescript
+import { Component, HostBinding, Input } from '@angular/core';
+```
 
 
